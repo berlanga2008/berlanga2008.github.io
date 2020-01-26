@@ -1,16 +1,16 @@
 import React from "react"
-import {graphql, useStaticQuery} from "gatsby"
-import {SiteIntro} from '../components/site/SiteIntro';
-import {PostItem} from '../components/post/PostItem';
-import {Layout} from '../components/shared/Layout';
-import {SEO} from '../components/shared/Seo';
-import {SiteDivider} from '../components/site/SiteDivider';
-import {CallToAction} from '../components/shared/CallToAction';
+import { graphql, useStaticQuery } from "gatsby"
+import { SiteIntro } from "../components/site/SiteIntro"
+import { PostItem } from "../components/post/PostItem"
+import { Layout } from "../components/shared/Layout"
+import { SEO } from "../components/shared/Seo"
+import { SiteDivider } from "../components/site/SiteDivider"
+import { CallToAction } from "../components/shared/CallToAction"
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
     query {
-      allWordpressPost(sort: {fields: [date], order:DESC}, limit: 5) {
+      allWordpressPost(sort: { fields: [date], order: DESC }, limit: 5) {
         edges {
           node {
             id
@@ -32,14 +32,14 @@ const IndexPage = () => {
         }
       }
     }
-  `);
+  `)
 
   return (
     <Layout>
-      <SEO title="Home"/>
+      <SEO title="Home" />
       <SiteIntro />
-      <SiteDivider/>
-      {data.allWordpressPost.edges.map(({node}) => (
+      <SiteDivider />
+      {data.allWordpressPost.edges.map(({ node }) => (
         <PostItem
           key={node.id}
           date={node.date}
@@ -47,14 +47,16 @@ const IndexPage = () => {
           readingTime={node.fields.readingTime}
           title={node.title}
           slug={node.slug}
-          excerpt={node.excerpt}/>
+          excerpt={node.excerpt}
+        />
       ))}
-      <CallToAction
+      {/* <CallToAction
         description="There's more... I've been blogging for quite a while!"
-        action="View all articles"
-        link="/category/t"/>
+        action="Ver todo el blog"
+        link="/category/blog"
+     />*/}
     </Layout>
-  );
-};
+  )
+}
 
 export default IndexPage

@@ -74,12 +74,12 @@ const normalize = entity =>
 
 module.exports = {
   siteMetadata: {
-    title: `Dimitri's tutorials`,
-    description: `Dimitri's tutorials about software development with Java and JavaScript`,
-    author: `@g00glen00b`,
-    bio: `Dimitri "g00glen00b" Mestdagh is a consultant at Cronos and tech lead at Aquafin. Usually you can find him trying out new libraries and technologies. Loves both Java and JavaScript.`,
+    title: `Miguelo Web`,
+    description: `Miguelo Web es mi web personal hecha en Gatsby y Wp como Backend`,
+    author: `@codifica_me`,
+    bio: `Miguel, consultor y desarrollador web, devOps and warrior code XD `,
     siteUrl: process.env.SITE_URL,
-    siteOrigin: new Date("2012-07-01"),
+    siteOrigin: new Date("2020-01-01"),
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -158,7 +158,7 @@ module.exports = {
               allWordpressPost.edges.map(({ node }) => getFeedItem(site, node)),
             query: feedItemQuery,
             output: `/rss.xml`,
-            title: `Dimitri's tutorial RSS feed`,
+            title: `Miguelo Web RSS feed`,
           },
         ],
       },
@@ -166,8 +166,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Dimitri's tutorials`,
-        short_name: `Dimitri\'s tutorials`,
+        name: `Miguelo Web mini-tutoriales`,
+        short_name: `Miguelo Web mini-tutoriales`,
         start_url: `/`,
         background_color: `#FFFFFF`,
         theme_color: `#55BABF`,

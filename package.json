@@ -1,9 +1,9 @@
 {
-  "name": "g00glen00b-gatsby",
+  "name": "prueba",
   "private": true,
-  "description": "Dimitri's blog",
+  "description": "prueba's blog",
   "version": "0.1.0",
-  "author": "g00glen00b",
+  "author": "prueba",
   "dependencies": {
     "@emotion/core": "^10.0.14",
     "@emotion/styled": "^10.0.14",
@@ -49,10 +49,7 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "develop-any": "gatsby develop -H 0.0.0.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/g00glen00b/g00glen00b-gatsby"
+    "develop-any": "gatsby develop -H 0.0.0.0",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public -r https://3c31b23fa3951a57f7235dd88a23cd346549480d@github.com/berlanga2008/berlanga2008.github.io.git"
   }
 }
