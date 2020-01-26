@@ -93,14 +93,18 @@ module.exports = {
     {
       resolve: `gatsby-source-wordpress`,
       options: {
-        baseUrl: process.env.WORDPRESS_API_HOST,
-        protocol: process.env.WORDPRESS_API_PROTOCOL,
+        baseUrl: `https://miguel.codifica.me`,
+        protocol: `https`,
         hostingWPCOM: false,
+        searchAndReplaceContentUrls: {
+          sourceUrl: `https://miguel.codifica.me`,
+          replacementUrl: `https://berlanga2008.github.io`,
+        },
         plugins: [
           {
             resolve: `gatsby-wordpress-inline-images`,
             options: {
-              baseUrl: `codifica.me`,
+              baseUrl: `miguel.codifica.me`,
               protocol: `https`,
             },
           },
