@@ -44,7 +44,7 @@ const ThemeIconContext = withTheme(({ theme, children }) => (
 
 export const SiteFooter = ({ origin }) => (
   <Footer>
-    <SocialLinks>
+    {/*<SocialLinks>
       <ThemeIconContext></ThemeIconContext>
     </SocialLinks>
     <Copyright>
@@ -59,7 +59,7 @@ export const SiteFooter = ({ origin }) => (
         cc by-sa 4.0
       </OutboundLink>{" "}
       with attribution required.
-    </Copyright>
+    </Copyright>*/}
   </Footer>
 )
 /*

@@ -55,7 +55,7 @@ const Post = ({ data }) => (
       content={data.wordpressPost.content}
     />
     <PostFooter
-      postUrl={`${data.site.siteMetadata.siteUrl}/${data.wordpressPost.slug}`}
+      postUrl={`${data.wordpressSiteMetadata.Url}/${data.wordpressPost.slug}`}
     />
     <AuthorCard />
   </Layout>
@@ -63,12 +63,12 @@ const Post = ({ data }) => (
 
 export const query = graphql`
   query($id: String!) {
-    site {
-      siteMetadata {
-        title
-        description
-        siteUrl
-      }
+    wordpressSiteMetadata {
+      id
+      source_url
+      url
+      title
+      name
     }
 
     wordpressPost(id: { eq: $id }) {

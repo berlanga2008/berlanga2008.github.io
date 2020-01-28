@@ -4,6 +4,20 @@ const he = require("he")
 const striptags = require("striptags")
 require("dotenv").config({ path: `.env.${environment}` })
 
+{
+  /*
+
+
+SITE_URL=https://malditawifi.web.app/
+WORDPRESS_API_HOST=miguel.codifica.me
+WORDPRESS_API_PROTOCOL=https
+GOOGLE_TRACKING_ID=UA-10823856-58
+URL_REPLACEMENT_FROM=https?:\/\/miguel\.codifica\.me\/(?!\wp-content)
+URL_REPLACEMENT_TO=https://malditawifi.web.app/
+
+*/
+}
+
 const siteMetadataQuery = `{
   site {
     siteMetadata {
@@ -78,7 +92,7 @@ module.exports = {
     description: `Miguelo Web es mi web personal hecha en Gatsby y Wp como Backend`,
     author: `@codifica_me`,
     bio: `Miguel, consultor y desarrollador web, devOps and warrior code XD `,
-    siteUrl: process.env.SITE_URL,
+    siteUrl: `https://malditawifi.web.app`,
     siteOrigin: new Date("2020-01-01"),
   },
   plugins: [
@@ -98,7 +112,7 @@ module.exports = {
         hostingWPCOM: false,
         searchAndReplaceContentUrls: {
           sourceUrl: `https://miguel.codifica.me`,
-          replacementUrl: `https://berlanga2008.github.io`,
+          replacementUrl: `https://malditawifi.web.app`,
         },
         plugins: [
           {

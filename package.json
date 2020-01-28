@@ -50,6 +50,6 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "develop-any": "gatsby develop -H 0.0.0.0",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public -r https://3c31b23fa3951a57f7235dd88a23cd346549480d@github.com/berlanga2008/berlanga2008.github.io.git"
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public -r https://3c31b23fa3951a57fd88a23cd346549480d@github.com/berlanga2008/berlanga2008.github.io.git"
   }
 }

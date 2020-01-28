@@ -84,7 +84,8 @@ export const PostDetail = ({ title, readingTime, content, tags, date }) => {
         <PageTitle>{title}</PageTitle>
         <PostMeta readingTime={readingTime} tags={tags} date={date} />
       </header>
-      <div>{parse(content, { replace: replaceMedia })}</div>
+      {/* <div>{parse(content, { replace: replaceMedia })}</div>*/}
+      <div>{content}</div>
     </article>
   )
 }
