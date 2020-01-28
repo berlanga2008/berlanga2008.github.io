@@ -12,8 +12,6 @@ SITE_URL=https://malditawifi.web.app/
 WORDPRESS_API_HOST=miguel.codifica.me
 WORDPRESS_API_PROTOCOL=https
 GOOGLE_TRACKING_ID=UA-10823856-58
-URL_REPLACEMENT_FROM=https?:\/\/miguel\.codifica\.me\/(?!\wp-content)
-URL_REPLACEMENT_TO=https://malditawifi.web.app/
 
 */
 }
@@ -42,7 +40,7 @@ const feedItemQuery = `{
   }
 }`
 
-const contentUrlRegex = new RegExp(process.env.URL_REPLACEMENT_FROM, "g")
+const contentUrlRegex = new RegExp("https?:\/\/miguel\.codifica\.me\/(?!\wp-content)", "g")
 
 const getFeedItem = (site, node) => ({
   description: node.excerpt,
@@ -55,7 +53,7 @@ const getFeedItem = (site, node) => ({
 const normalizeContentUrls = ({ content, ...rest }) => ({
   content:
     content != null &&
-    content.replace(contentUrlRegex, process.env.URL_REPLACEMENT_TO),
+    content.replace(contentUrlRegex, 'https://malditawifi.web.app/'),
   ...rest,
 })
 
@@ -118,11 +116,15 @@ module.exports = {
           {
             resolve: `gatsby-wordpress-inline-images`,
             options: {
-              baseUrl: `miguel.codifica.me`,
+              baseUrl: `malditawifi.web.app`,
               protocol: `https`,
             },
           },
         ],
+        searchAndReplaceContentUrls: {
+          sourceUrl: "https://miguel.codifica.me",
+          replacementUrl: "https://malditawifi.web.app",
+        },
         useACF: false,
         perPage: 100,
         concurrentRequests: 10,
