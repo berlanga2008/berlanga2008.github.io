@@ -11,7 +11,7 @@ export const NavItemLink = styled(props => <SimpleLink {...props} />)`
     margin-right: 0;
   }
 
-  @media (max-width: 1000px) {
+  @media (max-width: 1200px) {
     margin: 0 0.5em;
   }
 `

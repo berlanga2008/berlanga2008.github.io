@@ -1,6 +1,6 @@
 export default {
   light: {
-    maxWidth: "1000px",
+    maxWidth: "1200px",
     textColor: "#222222",
     iconColor: "#444444",
     primaryColor: "#55BABF",
@@ -13,7 +13,7 @@ export default {
     codeFont: "Roboto Mono, monospace",
   },
   dark: {
-    maxWidth: "1000px",
+    maxWidth: "1200px",
     textColor: "#E5E5E5",
     iconColor: "#E5E5E5",
     primaryColor: "#55BABF",

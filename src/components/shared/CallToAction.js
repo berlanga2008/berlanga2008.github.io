@@ -13,7 +13,7 @@ export const ActionDiv = styled.div`
     color: ${({ theme }) => theme.textColor};
   }
 
-  @media (max-width: 1000px) {
+  @media (max-width: 1200px) {
     padding: 2em;
   }
 `
