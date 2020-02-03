@@ -49,6 +49,7 @@ const getTwitterMetadata = (site, title, metaDescription, image) => [
   { name: `twitter:description`, content: metaDescription },
   { name: `twitter:site`, content: site.siteMetadata.siteUrl },
   { name: `twitter:image`, content: `${site.siteMetadata.siteUrl}${image}` },
+  { name: `google-site-verification`, content: `s3jAI51WWyipVqB9MCsunkxOnMkrVw8__4FPlVJvWaU` },
 ]
 
 export const SEO = ({ description, lang = "", meta = [], title, image }) => {
@@ -83,7 +84,7 @@ export const SEO = ({ description, lang = "", meta = [], title, image }) => {
               href: `${site.siteMetadata.siteUrl}/rss.xml`,
             },
           ]}
-        />
+        /> 
       )}
     </Location>
   )

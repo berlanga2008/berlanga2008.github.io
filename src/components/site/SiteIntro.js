@@ -34,7 +34,7 @@ export const SiteIntro = () => (
       Miguel Warrior Code
     </SiteIntroTitle>
     <SiteIntroDescription>
-      Bienvenido a la web donde hablaré especialmente de React y Gatsby.
+      Bienvenido a la web dónde hablaré especialmente de React y Gatsby.
     </SiteIntroDescription>
   </>
 )
