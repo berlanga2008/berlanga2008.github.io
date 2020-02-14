@@ -9,8 +9,8 @@ const Tag = styled.span`
 export const PostTags = ({tags}) => (
   <span>
     {tags == null ? <Tag>none</Tag> : tags.map(({name, slug, id}, idx) => [
-      idx > 0 && ', ',
-      <Tag key={id}>
+      idx > 0 && ' ',
+      <Tag key={id} className="tag">
         <SimpleLink
           to={`/tag/${slug}`}
           title={`View all ${name} posts`}>
