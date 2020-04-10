@@ -28,6 +28,41 @@ const GlobalStyles = withTheme(({ theme }) => (
         background: ${theme.backgroundColor};
       }
 
+
+      .tag{
+        display: inline-block;
+        background: #209b35;
+        padding: 5px 10px;
+        margin:2px 2px 2px 2px;
+        font: normal 16px sans-serif;
+        position: relative;
+        cursor: default;
+        box-shadow:1px 1px 0 rgba(0,0,0,.2);
+        -webkit-transform-origin:0% 50%;
+        -webkit-animation: swing 1s;
+        -o-animation: swing 1s;
+        animation: swing 1s ;
+      }
+      .tag a{
+        color: #FFF;
+        text-transform: capitalize;
+      }      
+      
+      .tag:after{
+        content: "";
+        width: 6px;
+        height: 6px;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        background: #FFF;
+        position: absolute;
+        left: -3px;
+        top: 12px;
+        box-shadow:inset 1px 1px 0 #CCC;
+      }    
+        
+
       pre,
       code,
       pre *,
