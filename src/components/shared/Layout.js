@@ -45,6 +45,7 @@ const GlobalStyles = withTheme(({ theme }) => (
       }
       .tag a{
         color: #FFF;
+        text-transform: capitalize;
       }      
       
       .tag:after{
