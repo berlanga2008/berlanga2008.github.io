@@ -2,18 +2,9 @@ const environment =
   process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || "development"
 const he = require("he")
 const striptags = require("striptags")
+/*/home/alexwin/.cache/typescript/3.8/node_modules/@types/he/index*/
 require("dotenv").config({ path: `.env.${environment}` })
-
 {
-  /*
-
-
-SITE_URL=https://malditawifi.web.app/
-WORDPRESS_API_HOST=miguel.codifica.me
-WORDPRESS_API_PROTOCOL=https
-GOOGLE_TRACKING_ID=UA-10823856-58
-
-*/
 }
 
 const siteMetadataQuery = `{
@@ -40,7 +31,10 @@ const feedItemQuery = `{
   }
 }`
 
-const contentUrlRegex = new RegExp("https?:\/\/miguel\.codifica\.me\/(?!\wp-content)", "g")
+const contentUrlRegex = new RegExp(
+  "https?://miguel.codifica.me/(?!wp-content)",
+  "g"
+)
 
 const getFeedItem = (site, node) => ({
   description: node.excerpt,
@@ -53,7 +47,7 @@ const getFeedItem = (site, node) => ({
 const normalizeContentUrls = ({ content, ...rest }) => ({
   content:
     content != null &&
-    content.replace(contentUrlRegex, 'https://malditawifi.web.app/'),
+    content.replace(contentUrlRegex, "https://malditawifi.web.app/"),
   ...rest,
 })
 
@@ -199,7 +193,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: 'UA-10823856-59',
+        trackingId: "UA-10823856-59",
         head: false,
         anonymize: true,
         respectDNT: true,

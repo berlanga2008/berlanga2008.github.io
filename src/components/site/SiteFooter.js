@@ -12,6 +12,7 @@ import { IconContext } from "react-icons"
 import styled from "@emotion/styled"
 import { OutboundLink } from "gatsby-plugin-google-analytics"
 import { withTheme } from "emotion-theming"
+import CookieConsent from "react-cookie-consent"
 
 const Footer = styled.footer`
   display: flex;
@@ -60,6 +61,14 @@ export const SiteFooter = ({ origin }) => (
       </OutboundLink>{" "}
       with attribution required.
     </Copyright>*/}
+    <CookieConsent
+      location="bottom"
+      buttonText="Accept"
+      declineButtonText="Decline"
+      cookieName="gatsby-gdpr-google-analytics">
+
+      Este sitio usa cookies...
+</CookieConsent>
   </Footer>
 )
 /*
