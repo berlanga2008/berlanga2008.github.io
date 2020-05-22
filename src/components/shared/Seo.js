@@ -26,21 +26,21 @@ const getOpenGraphMetadata = (
   location,
   image
 ) => [
-  { property: `og:title`, content: title },
-  { property: `og:description`, content: metaDescription },
-  { property: `og.site_name`, content: site.siteMetadata.title },
-  { property: `og:type`, content: `website` },
-  { property: `og:locale`, content: `en_US` },
-  {
-    property: `og:url`,
-    content: `${site.siteMetadata.siteUrl}${location.pathname}`,
-  },
-  { property: `og:image`, content: `${site.siteMetadata.siteUrl}${image}` },
-  {
-    property: `og:image:secure_url`,
-    content: `${site.siteMetadata.siteUrl}${image}`,
-  },
-]
+    { property: `og:title`, content: title },
+    { property: `og:description`, content: metaDescription },
+    { property: `og.site_name`, content: site.siteMetadata.title },
+    { property: `og:type`, content: `website` },
+    { property: `og:locale`, content: `en_US` },
+    {
+      property: `og:url`,
+      content: `${site.siteMetadata.siteUrl}${location.pathname}`,
+    },
+    { property: `og:image`, content: `${site.siteMetadata.siteUrl}${image}` },
+    {
+      property: `og:image:secure_url`,
+      content: `${site.siteMetadata.siteUrl}${image}`,
+    },
+  ]
 
 const getTwitterMetadata = (site, title, metaDescription, image) => [
   { name: `twitter:card`, content: `summary` },
@@ -49,7 +49,7 @@ const getTwitterMetadata = (site, title, metaDescription, image) => [
   { name: `twitter:description`, content: metaDescription },
   { name: `twitter:site`, content: site.siteMetadata.siteUrl },
   { name: `twitter:image`, content: `${site.siteMetadata.siteUrl}${image}` },
-  { name: `google-site-verification`, content: `s3jAI51WWyipVqB9MCsunkxOnMkrVw8__4FPlVJvWaU` },
+  { name: `google-site-verification`, content: `H_5-qk9K9fpXrwt-93A6lxonEta-GcVFHqBMeq0AGmc` },
 ]
 
 export const SEO = ({ description, lang = "", meta = [], title, image }) => {
@@ -84,7 +84,7 @@ export const SEO = ({ description, lang = "", meta = [], title, image }) => {
               href: `${site.siteMetadata.siteUrl}/rss.xml`,
             },
           ]}
-        /> 
+        />
       )}
     </Location>
   )
