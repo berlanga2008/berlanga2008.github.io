@@ -142,8 +142,9 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-emotion`,
+    `react-cookie-consent`,
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts-v2`,
       options: {
         fonts: [
           {
@@ -199,6 +200,13 @@ module.exports = {
         respectDNT: true,
       },
     },
-    `gatsby-plugin-robots-txt`,
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://malditawifi.web.app',
+        sitemap: 'https://malditawifi.web.app/sitemap.xml',
+        configFile: 'robots-txt.config.js'
+      },
+    },
   ],
 }
