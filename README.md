@@ -32,3 +32,6 @@ After that, you can use the following commands to run the project:
 npm install
 npm start
 ```
+
+[Recomiendo Mejor portatil para programar](https://www.codifica.me/mejor-ordenador-para-empezar-programar/)
+
