@@ -33,5 +33,5 @@ npm install
 npm start
 ```
 
-[Recomiendo Mejor portatil para programar](https://www.codifica.me/mejor-ordenador-para-empezar-programar/)
+[Recomiendo Mejor portatil para programar](https://www.codifica.me/mejor-ordenador-para-empezar-programar/) 
 
